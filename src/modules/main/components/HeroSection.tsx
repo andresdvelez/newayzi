@@ -1,8 +1,12 @@
 "use client";
 
+import { useRouter } from "@/modules/translations/i18n/routing";
 import { Button } from "@heroui/react";
+import Image from "next/image";
 
 export const HeroSection = () => {
+  const router = useRouter();
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +39,7 @@ export const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
+                onPress={() => router.push("/auth/waitlist")}
                 size="lg"
                 className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
@@ -68,11 +73,12 @@ export const HeroSection = () => {
             <div className="relative">
               {/* Main Preview Card */}
               <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="aspect-video bg-gradient-to-br from-newayzi-purple/20 to-newayzi-blue/20 rounded-2xl mb-6 flex items-center justify-center">
-                  <img
-                    src="/lovable-uploads/6e4a8793-ce06-4dd1-a6e6-39ee7f42079d.png"
+                <div className="aspect-video bg-gradient-to-br from-newayzi-purple/20 to-newayzi-blue/20 rounded-2xl mb-6 flex items-center justify-center relative">
+                  <Image
+                    src="/placeholder.png"
                     alt="Newayzi Platform Preview"
                     className="w-full h-full object-cover rounded-2xl"
+                    fill
                   />
                 </div>
                 <div className="space-y-3">

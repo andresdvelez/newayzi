@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 const { heroui } = require("@heroui/react");
+import { addDynamicIconSelectors } from "@iconify/tailwind";
 
 const config: Config = {
   darkMode: ["class"],
@@ -132,7 +133,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), heroui()],
+  plugins: [
+    require("tailwindcss-animate"),
+    heroui(),
+    addDynamicIconSelectors(),
+  ],
 };
 
 export default config;

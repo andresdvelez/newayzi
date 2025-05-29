@@ -1,8 +1,11 @@
 "use client";
 
+import { useRouter } from "@/modules/translations/i18n/routing";
 import { Button } from "@heroui/react";
 
 export const Navigation = () => {
+  const router = useRouter();
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +55,10 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
-            <Button className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-6 py-2 rounded-full transition-all duration-300 hover:scale-105">
+            <Button
+              onPress={() => router.push("/auth/waitlist")}
+              className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            >
               Únete a la Lista
             </Button>
           </div>

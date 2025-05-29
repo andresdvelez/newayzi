@@ -1,32 +1,31 @@
-import { addToast, Button, Card, CardBody, Input } from "@heroui/react";
-import { useState } from "react";
+import { useRouter } from "@/modules/translations/i18n/routing";
+import { Button, Card, CardBody } from "@heroui/react";
 
 export const WaitlistSignup = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      addToast({
-        title: "Error",
-        description: "Por favor ingresa tu email",
-      });
-      return;
-    }
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!email) {
+  //     addToast({
+  //       title: "Error",
+  //       description: "Por favor ingresa tu email",
+  //     });
+  //     return;
+  //   }
 
-    setIsSubmitting(true);
+  //   setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      addToast({
-        title: "¡Bienvenido a la lista!",
-        description: "Te notificaremos cuando Newayzi esté disponible",
-      });
-      setEmail("");
-      setIsSubmitting(false);
-    }, 1000);
-  };
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     addToast({
+  //       title: "¡Bienvenido a la lista!",
+  //       description: "Te notificaremos cuando Newayzi esté disponible",
+  //     });
+  //     setEmail("");
+  //     setIsSubmitting(false);
+  //   }, 1000);
+  // };
 
   return (
     <section className="py-20 bg-gradient-to-br from-newayzi-purple via-newayzi-blue to-newayzi-dark-orchid">
@@ -45,8 +44,8 @@ export const WaitlistSignup = () => {
 
         <Card className="bg-white/10 backdrop-blur-md border-0 shadow-2xl max-w-md mx-auto">
           <CardBody className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
+            {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
+            {/* <div>
                 <Input
                   type="email"
                   placeholder="tu@email.com"
@@ -54,16 +53,16 @@ export const WaitlistSignup = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/70 font-sora text-center py-3 px-4 rounded-full"
                 />
-              </div>
+              </div> */}
 
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-white text-newayzi-purple hover:bg-gray-100 font-sora py-3 px-6 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
-              >
-                {isSubmitting ? "Registrando..." : "Únete a la Lista de Espera"}
-              </Button>
-            </form>
+            <Button
+              onPress={() => router.push("/auth/waitlist")}
+              type="submit"
+              className="w-full bg-white text-newayzi-purple hover:bg-gray-100 font-sora py-3 px-6 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
+            >
+              Únete a la Lista de Espera
+            </Button>
+            {/* </form> */}
 
             <div className="mt-6 text-white/80 text-sm font-sora">
               <p>✨ Acceso anticipado garantizado</p>
