@@ -14,28 +14,53 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="animate-fade-in">
             <div className="inline-flex items-center bg-newayzi-purple/10 text-newayzi-purple px-4 py-2 rounded-full text-sm font-medium font-sora mb-6">
-              ✨ Próximamente disponible
+              ✨ Una nueva forma de hospedarte está por llegar
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-newayzi-jet mb-6 font-sora leading-tight">
-              La solución más
+              Flexibilidad, diseño y
               <span className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue bg-clip-text text-transparent">
                 {" "}
-                corta
+                experiencia
               </span>
               <br />
-              para las estancias
-              <span className="bg-gradient-to-r from-newayzi-blue to-newayzi-dark-orchid bg-clip-text text-transparent">
-                {" "}
-                largas
-              </span>
+              de alto nivel
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 font-sora leading-relaxed">
-              Versatilidad es: Rentar por 15 días o más y poder renovar las
-              veces que quieras. Descubre una nueva forma de viajar y hospedarte
-              con Newayzi.
+              <strong>
+                Desde horas hasta meses. Desde cápsulas a propiedades cinco
+                estrellas.
+              </strong>{" "}
+              Todo al alcance de un clic. #NewayziExperience
             </p>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-100 shadow-lg">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-newayzi-purple font-sora">
+                    Horas
+                  </div>
+                  <div className="text-sm text-gray-600 font-sora">
+                    Cápsulas
+                  </div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-newayzi-blue font-sora">
+                    Días
+                  </div>
+                  <div className="text-sm text-gray-600 font-sora">Suites</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-newayzi-red font-sora">
+                    Meses
+                  </div>
+                  <div className="text-sm text-gray-600 font-sora">
+                    Apartasuites
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
@@ -43,8 +68,12 @@ export const HeroSection = () => {
                 size="lg"
                 className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Únete a la Lista de Espera
-                {/* <ChevronRight className="ml-2 w-5 h-5" /> */}
+                Notifícame en el lanzamiento
+                <i
+                  className="icon-[material-symbols--chevron-right-rounded] size-5 ml-2"
+                  role="img"
+                  aria-hidden="true"
+                />
               </Button>
 
               <Button
@@ -52,19 +81,24 @@ export const HeroSection = () => {
                 size="lg"
                 className="border-2 border-newayzi-purple text-newayzi-purple hover:bg-newayzi-purple hover:text-white font-sora px-8 py-4 rounded-full text-lg transition-all duration-300"
               >
+                <i
+                  className="icon-[tabler--play] size-5 mr-2"
+                  role="img"
+                  aria-hidden="true"
+                />
                 Ver Demo
               </Button>
             </div>
 
-            <div className="flex items-center space-x-6 text-sm text-gray-500 font-sora">
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                15 días mínimos de permanencia
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-newayzi-purple rounded-full mr-2"></div>
-                Renovación flexible
-              </div>
+            <div className="text-sm text-gray-500 font-sora">
+              <p className="flex items-center mb-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                Lanzamiento previsto: Q3 2025
+              </p>
+              <p className="flex items-center">
+                <span className="w-2 h-2 bg-newayzi-purple rounded-full mr-3"></span>
+                Disponible inicialmente en Colombia
+              </p>
             </div>
           </div>
 
@@ -73,9 +107,9 @@ export const HeroSection = () => {
             <div className="relative">
               {/* Main Preview Card */}
               <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="aspect-video bg-gradient-to-br from-newayzi-purple/20 to-newayzi-blue/20 rounded-2xl mb-6 flex items-center justify-center relative">
+                <div className="aspect-video bg-gradient-to-br from-newayzi-purple/20 to-newayzi-blue/20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative">
                   <Image
-                    src="/placeholder.png"
+                    src="/brand/newayzi-landing.png"
                     alt="Newayzi Platform Preview"
                     className="w-full h-full object-cover rounded-2xl"
                     fill
@@ -84,18 +118,27 @@ export const HeroSection = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-newayzi-purple bg-newayzi-purple/10 px-3 py-1 rounded-full font-sora">
-                      Bogotá
+                      Suite Premium
                     </span>
-                    <span className="text-gray-500 text-sm font-sora">
-                      25 m²
-                    </span>
+                    <div className="flex items-center text-yellow-500">
+                      <span className="text-sm font-sora mr-1">4.9</span>
+                      ★★★★★
+                    </div>
                   </div>
                   <h3 className="text-xl font-semibold text-newayzi-jet font-sora">
-                    Be Living
+                    Suite Ejecutiva
                   </h3>
                   <p className="text-gray-600 text-sm font-sora">
-                    1 Habitación, 1 Baño, 25 m²
+                    Por horas • Días • Semanas • Equipada
                   </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-newayzi-purple font-sora">
+                      Flexible
+                    </span>
+                    <span className="text-sm text-gray-400 font-sora">
+                      Alto nivel
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -106,8 +149,10 @@ export const HeroSection = () => {
                 </span>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-newayzi-blue to-newayzi-majorelle rounded-xl shadow-lg flex items-center justify-center">
-                <span className="text-white font-bold font-sora">★</span>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl shadow-lg flex items-center justify-center">
+                <span className="text-white font-bold font-sora text-xs">
+                  NEW
+                </span>
               </div>
             </div>
           </div>

@@ -110,7 +110,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 font-sora">
-            © 2024 Newayzi. Todos los derechos reservados.
+            © 2025 Newayzi. Todos los derechos reservados.
           </p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <span className="text-gray-400 text-sm font-sora">@newayzi</span>

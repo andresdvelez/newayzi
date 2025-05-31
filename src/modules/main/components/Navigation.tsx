@@ -26,40 +26,46 @@ export const Navigation = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <a
-              href="#inicio"
-              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora"
+              href="#que-es"
+              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
-              Inicio
+              ¿Qué es?
             </a>
             <a
-              href="#reservar"
-              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora"
+              href="#beneficios"
+              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
-              Reservar
+              Beneficios
             </a>
             <a
-              href="#historial"
-              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora"
+              href="#alojamientos"
+              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
-              Historial
+              Alojamientos
             </a>
             <a
-              href="#perfil"
-              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora"
+              href="#contacto"
+              className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
-              Perfil
+              Contacto
             </a>
           </div>
 
           {/* CTA Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            <Button
+              variant="bordered"
+              className="hidden md:inline-flex border-newayzi-purple text-newayzi-purple hover:bg-newayzi-purple hover:text-white font-sora transition-colors"
+            >
+              WhatsApp
+            </Button>
             <Button
               onPress={() => router.push("/auth/waitlist")}
               className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             >
-              Únete a la Lista
+              Lista de espera
             </Button>
           </div>
         </div>

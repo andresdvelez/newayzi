@@ -20,24 +20,26 @@ const OPEN_GRAPH_IMAGE_URL = `${BASE_URL}/brand/thumbnail.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Newayzi | Inicio",
+  title: "Newayzi | Hospedaje flexible y premium por horas, días o meses",
   description:
-    "Inicio - La solución más corta para las estancias largas | Newayzi",
+    "Descubre una nueva forma de hospedarte en Colombia. Desde cápsulas inteligentes hasta suites de lujo. Reserva por horas, noches o meses.",
+  keywords:
+    "alojamiento por horas, hospedaje flexible Colombia, cápsulas para dormir Bogotá, suites por semanas, apartasuites premium Medellín, alojamientos modernos Colombia",
   alternates: {
     canonical: "https://app.newayzi.vercel.app/es",
   },
   openGraph: {
-    title: "Newayzi | Inicio",
+    title: "Newayzi | Hospedaje flexible y premium por horas, días o meses",
     description:
       "Inicio - La solución más corta para las estancias largas | Newayzi",
     url: BASE_URL,
-    siteName: "Newayzi | Inicio",
+    siteName: "Newayzi",
     images: [
       {
         url: OPEN_GRAPH_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Newayzi | Inicio",
+        alt: "Newayzi",
       },
     ],
     locale: "es_ES",
@@ -45,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Newayzi | Inicio",
+    title: "Newayzi | Hospedaje flexible y premium por horas, días o meses",
     description:
-      "Inicio - La solución más corta para las estancias largas | Newayzi",
+      "Descubre una nueva forma de hospedarte en Colombia. Desde cápsulas inteligentes hasta suites de lujo. Reserva por horas, noches o meses.",
     images: [OPEN_GRAPH_IMAGE_URL],
   },
 };

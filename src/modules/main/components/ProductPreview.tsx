@@ -1,6 +1,89 @@
-import { Card, CardBody } from "@heroui/react";
+import { Button, Card, CardBody } from "@heroui/react";
+import Image from "next/image";
 
 export const ProductPreview = () => {
+  const properties = [
+    {
+      name: "Cápsula Smart Sleep",
+      location: "Aeropuerto El Dorado, Bogotá",
+      image:
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNsZWVwJTIwY2Fwc3VsZXxlbnwwfHwwfHx8MA%3D%3D",
+      price: "Desde $25.000/hora",
+      features: [
+        "WiFi ultrarrápido",
+        "Climatización",
+        "Cargadores USB",
+        "Aislamiento acústico",
+      ],
+      color: "bg-newayzi-purple",
+    },
+    {
+      name: "Suite Ejecutiva",
+      location: "Zona T, Bogotá",
+      image:
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D",
+      price: "Desde $180.000/noche",
+      features: [
+        "Cama king size",
+        "Smart TV",
+        "Escritorio de trabajo",
+        "Room service 24/7",
+      ],
+      color: "bg-newayzi-blue",
+    },
+    {
+      name: "Apartasuite Premium",
+      location: "El Poblado, Medellín",
+      image:
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D",
+      price: "Desde $3.200.000/mes",
+      features: ["Cocina completa", "Lavadora", "Gimnasio", "Vista panorámica"],
+      color: "bg-newayzi-dark-orchid",
+    },
+    {
+      name: "Villa Exclusiva",
+      location: "Baru, Cartagena",
+      image:
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bHV4dXJ5JTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
+      price: "Desde $850.000/noche",
+      features: [
+        "Piscina privada",
+        "Servicio de chef",
+        "Vista al mar",
+        "Transporte privado",
+      ],
+      color: "bg-newayzi-red",
+    },
+    {
+      name: "Loft Corporativo",
+      location: "Ciudad del Río, Medellín",
+      image:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwbG9mdHxlbnwwfHwwfHx8MA%3D%3D",
+      price: "Desde $2.800.000/mes",
+      features: [
+        "Espacio de coworking",
+        "Sala de reuniones",
+        "Seguridad 24/7",
+        "Internet dedicado",
+      ],
+      color: "bg-newayzi-majorelle",
+    },
+    {
+      name: "Cápsula Smart Sleep",
+      location: "Aeropuerto El Dorado, Bogotá",
+      image:
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNsZWVwJTIwY2Fwc3VsZXxlbnwwfHwwfHx8MA%3D%3D",
+      price: "Desde $25.000/hora",
+      features: [
+        "WiFi ultrarrápido",
+        "Climatización",
+        "Cargadores USB",
+        "Aislamiento acústico",
+      ],
+      color: "bg-newayzi-purple",
+    },
+  ];
+
   const destinations = [
     {
       city: "Bogotá",
@@ -53,8 +136,9 @@ export const ProductPreview = () => {
               className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <CardBody className="p-0 relative">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <Image
+                    fill
                     src={destination.image}
                     alt={`Alojamientos en ${destination.city}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -79,58 +163,81 @@ export const ProductPreview = () => {
           ))}
         </div>
 
-        {/* App Preview Section */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Mobile App Preview */}
-          <Card className="bg-gradient-to-br from-newayzi-purple to-newayzi-blue p-8 text-white border-0">
-            <CardBody className="p-0">
-              <h3 className="text-2xl font-bold mb-4 font-sora">
-                Búsqueda Newayzi
-              </h3>
-              <p className="text-white/90 mb-6 font-sora">
-                Segmenta tus alojamientos y encuentra exactamente lo que buscas
-              </p>
-              <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-sm">
-                <div className="w-full h-32 bg-white/10 rounded-xl mb-4"></div>
-                <div className="text-sm font-sora">
-                  Vista previa de la app móvil
-                </div>
-              </div>
-            </CardBody>
-          </Card>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-newayzi-jet mb-6 font-sora">
+              Top 5
+              <span className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue bg-clip-text text-transparent">
+                {" "}
+                alojamientos destacados
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sora">
+              Estos son algunos de los espacios que pronto podrás reservar a
+              través de Newayzi
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {properties.map((property, index) => (
+              <Card
+                key={index}
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300"
+              >
+                <CardBody className="p-0 relative">
+                  {/* Property Image */}
+                  <div className="aspect-[4/3] overflow-hidden relative">
+                    <Image
+                      fill
+                      src={property.image}
+                      alt={property.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
 
-          {/* Featured Properties */}
-          <Card className="bg-gradient-to-br from-newayzi-jet to-gray-800 p-8 text-white border-0">
-            <CardBody className="p-0">
-              <div className="flex items-center mb-4">
-                <span className="text-2xl mr-2">⭐</span>
-                <span className="text-sm font-sora">Medellín</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 font-sora">
-                Top 5 de alojamientos
-              </h3>
-              <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-sm">
-                <div className="w-full h-32 bg-white/10 rounded-xl mb-4"></div>
-                <div className="text-sm font-sora">Propiedades destacadas</div>
-              </div>
-            </CardBody>
-          </Card>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
 
-          {/* Sustainable Tourism */}
-          <Card className="bg-gradient-to-br from-gray-800 to-newayzi-jet p-8 text-white border-0">
-            <CardBody className="p-0">
-              <h3 className="text-2xl font-bold mb-4 font-sora">
-                Tu apartamento por menos
-              </h3>
-              <h4 className="text-xl font-semibold mb-6 font-sora">
-                Hotelería sostenible
-              </h4>
-              <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-sm">
-                <div className="w-full h-32 bg-white/10 rounded-xl mb-4"></div>
-                <div className="text-sm font-sora">Turismo responsable</div>
-              </div>
-            </CardBody>
-          </Card>
+                  {/* Price Tag */}
+                  <div
+                    className={`absolute top-4 right-4 ${property.color} text-white px-3 py-1 rounded-full text-sm font-medium font-sora`}
+                  >
+                    {property.price}
+                  </div>
+
+                  {/* Property Info */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white font-bold text-xl mb-1 font-sora">
+                      {property.name}
+                    </h3>
+                    <p className="text-white/80 text-sm mb-3 font-sora">
+                      {property.location}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {property.features.map((feature, featureIndex) => (
+                        <span
+                          key={featureIndex}
+                          className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full font-sora"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button className="bg-gradient-to-r from-newayzi-purple to-newayzi-blue hover:from-newayzi-blue hover:to-newayzi-purple text-white font-sora px-10 py-6 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <span className="mr-2">💬</span>
+              Contáctanos por WhatsApp
+            </Button>
+            <p className="text-sm text-gray-500 mt-4 font-sora">
+              Pregúntanos por disponibilidad, lanzamiento o más detalles
+            </p>
+          </div>
         </div>
       </div>
     </section>
