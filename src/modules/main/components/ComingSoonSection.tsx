@@ -6,17 +6,14 @@ export const ComingSoonSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content - App Mockup */}
-          <div className="rounded-3xl overflow-visible">
+          <div className="rounded-3xl ">
             <div className="relative aspect-[9/16] max-w-xs mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-newayzi-purple to-newayzi-blue rounded-3xl transform -rotate-6"></div>
               <div className="absolute inset-0 bg-white p-0 rounded-3xl transform rotate-0 overflow-visible">
                 <Image
                   src="/brand/mobile-mockup.png"
                   alt="Newayzi mobile app"
-                  className=" object-cover rounded-2xl overflow-visible"
-                  classNames={{
-                    wrapper: "overflow-visible",
-                  }}
+                  className=" object-cover rounded-2xl "
                 />
               </div>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-700/30 rounded-full"></div>

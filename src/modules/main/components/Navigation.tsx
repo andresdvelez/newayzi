@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "@/modules/translations/i18n/routing";
+import { Link, useRouter } from "@/modules/translations/i18n/routing";
 import { Button } from "@heroui/react";
 
 export const Navigation = () => {
@@ -11,7 +11,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <div className="flex items-center space-x-2">
               {/* Newayzi Logo */}
               <div className="w-8 h-8 bg-gradient-to-br from-newayzi-purple to-newayzi-blue rounded-lg flex items-center justify-center">
@@ -23,34 +23,34 @@ export const Navigation = () => {
                 Newayzi
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
-            <a
-              href="#que-es"
+            <Link
+              href="#"
               className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
               ¿Qué es?
-            </a>
-            <a
-              href="#beneficios"
+            </Link>
+            <Link
+              href="#"
               className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
               Beneficios
-            </a>
-            <a
-              href="#alojamientos"
+            </Link>
+            <Link
+              href="/homes"
               className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
               Alojamientos
-            </a>
-            <a
-              href="#contacto"
+            </Link>
+            <Link
+              href="#"
               className="text-gray-700 hover:text-newayzi-purple transition-colors font-sora text-sm"
             >
               Contacto
-            </a>
+            </Link>
           </div>
 
           {/* CTA Button */}
