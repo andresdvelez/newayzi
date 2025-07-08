@@ -13,6 +13,7 @@
         "next-intl": "^4.1.0",
         "react": "19.1.0",
         "react-dom": "19.1.0",
+        "react-floating-whatsapp": "^5.0.8",
         "react-hook-form": "^7.56.4",
         "tailwindcss-animate": "^1.0.7",
         "zod": "^3.25.42",
@@ -1093,6 +1094,8 @@
     "react": ["react@19.1.0", "", {}, "sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg=="],
 
     "react-dom": ["react-dom@19.1.0", "", { "dependencies": { "scheduler": "^0.26.0" }, "peerDependencies": { "react": "^19.1.0" } }, "sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g=="],
+
+    "react-floating-whatsapp": ["react-floating-whatsapp@5.0.8", "", { "peerDependencies": { "react": ">=18.0.0", "react-dom": ">=18.0.0" } }, "sha512-4X485d04u7MoWpn61OpWPO/mL94P3gaFq1L932ztH7bo9eClAFcg5ufIxNKbJo9/1h0xpjWZKEW0KBB0apWzZw=="],
 
     "react-hook-form": ["react-hook-form@7.56.4", "", { "peerDependencies": { "react": "^16.8.0 || ^17 || ^18 || ^19" } }, "sha512-Rob7Ftz2vyZ/ZGsQZPaRdIefkgOSrQSPXfqBdvOPwJfoGnjwRJUs7EM7Kc1mcoDv3NOtqBzPGbcMB8CGn9CKgw=="],
 
